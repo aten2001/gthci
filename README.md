@@ -1,4 +1,4 @@
-gthci
-=====
+CS 6750 HCI
+===========
 
-CS 6750 HCI: Prototyping mobile privacy settings for Facebook
+Prototyping mobile privacy settings for Facebook

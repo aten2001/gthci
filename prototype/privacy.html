@@ -1,0 +1,73 @@
+<!--
+    The content on this page was created for an academic project for a HCI class.
+    The stylizing is similar to Facebook's mobile app, as the project is about creating a new interface for
+    adjusting privacy settings on Facebook's mobile app. All images belong to their own respective owners.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Facebook Privacy Shortcuts
+    </title>
+    <!-- Include JS scripts and CSS -->
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="jsjquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="css/privacy.css">
+    <!-- Custom scripts -->
+    <script>
+        $(function() {
+            $( "#image1-draggable" ).draggable();
+            $( "#image2-draggable" ).draggable();
+            $( "#image3-draggable" ).draggable();
+        });
+    </script>
+</head>
+
+<body>
+<div id="container">
+    <div id="header">
+        <img class="wide-images" src="images/privacyshortcuts.png" alt="Privacy Shortcuts" />
+        <br />
+        <img class="wide-images" src="images/whocanseemystuff.png" alt="Banner: Who can see my stuff?" />
+    </div>
+    <div id="content">
+        <table border="0" style="table-layout: fixed; width:100%;" >
+        <tr height="200px">
+        <td style="width:33%;">
+        <div id="image1-draggable">
+            <img class="images" src="images/buddy.png" alt="Buddy" />
+        </div>
+        </td>
+        <td>
+        <div id="image2-draggable">
+            <img class="images" src="images/log.png" alt="Buddy" />
+        </div>
+        </td>
+
+        <td>
+        <div id="image3-draggable">
+            <img class="images" src="images/man.png" alt="Man" />
+        </div>
+        </td>
+        </tr>
+        </table>
+
+        <!-- Circle -->
+        <div id="circle">
+            <svg width="600px" height="320px" 
+                 viewPort="0 0 200 200" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+                <circle cx="300" cy="200" r="100" fill="rgba(255,255,255,0.0)" stroke="black">
+            </svg>
+            <div style="font-size:1.7em">
+                Drag who you want to be able to see your stuff inside the circle
+            </div>
+        </div>
+    </div>
+
+<img class="wide-images" src="images/footer.png" alt="Footer Navigation" />
+</body>
+</html>
+        

@@ -1,0 +1,33 @@
+/* CSS file for all the elements on the Privacy Shortcuts page */
+
+#container {
+	width: 600px;
+}
+
+#content {
+	background-color: #EEEEEE;
+	height: 800px;
+	width: 600px;
+	float:left;
+}
+
+#circle {
+	text-align: center;
+}
+
+#icon-table {
+
+}
+
+.wide-images {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.images {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

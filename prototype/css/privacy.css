@@ -40,9 +40,9 @@ td {
     z-index: -1;
 }
 
-/* The inner box that the elements snap to.
+/* The inner box that the elements snap to (where you "drop" them)
  * Do not change these values unless you know what you're doing! */
-#snap-inner {
+#droppable {
     width: 90%;
     height: 80%;
     position: absolute;

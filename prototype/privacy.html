@@ -18,9 +18,21 @@
     <!-- Custom scripts -->
     <script>
         $(function() {
-            $( "#image1-draggable" ).draggable({ snap: "#snap-inner", snapMode: "inner", snapTolerance: 30 });
-            $( "#image2-draggable" ).draggable({ snap: "#snap-inner", snapMode: "inner", snapTolerance: 30 });
-            $( "#image3-draggable" ).draggable({ snap: "#snap-inner", snapMode: "inner", snapTolerance: 30 });
+            // Set draggable, and revert back to original position
+            // if not snapped to #droppable
+            $(".draggable").draggable({
+                revert : function(event, ui) {
+                    $(this).data("uiDraggable").originalPosition = {
+                        top : 0,
+                        left : 0
+                    };
+                    // return (event !== false) ? false : true;
+                    return !event; },
+                snap: "#droppable",
+                snapMode: "inner",
+                snapTolerance: 30
+            });
+            $("#droppable").droppable();
         });
     </script>
 </head>
@@ -36,17 +48,17 @@
         <!-- Draggable Icons -->
         <table><tr>
             <td>
-                <div id="image1-draggable">
+                <div class="draggable">
                     <img class="images" src="images/icon_user.png" alt="You" />
                 </div>
             </td>
             <td>
-                <div id="image2-draggable">
+                <div class="draggable">
                     <img class="images" src="images/icon_friends.png" alt="Your Friends" />
                 </div>
             </td>
             <td>
-                <div id="image3-draggable">
+                <div class="draggable">
                     <img class="images" src="images/icon_everyone.png" alt="Everyone" />
                 </div>
             </td>
@@ -54,7 +66,7 @@
 
         <!-- Permission Box -->
         <div id="snap-outer">
-            <div id="snap-inner"></div>
+            <div id="droppable"></div>
         </div>
         <div id="update-text">
             <!-- TODO: This text should dynamically adjust based on # of elements inside box -->

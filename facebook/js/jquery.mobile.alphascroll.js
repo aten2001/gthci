@@ -26,7 +26,7 @@
 					$( alphabet ).each( function( index, value ) {
 						// attach the alphascroll-item class to each letter if there is a corresponding divider (acts as a link)
 						if ( $.inArray( value, dividers ) > -1 ) {
-							scrollbar += '<li id="alphascroll-' + value + '" class="alphascroll-item" unselectable="on">' + value.toUpperCase() + '</li>';
+							scrollbar += '<li id="alphascroll-' + value + '" class="alphascroll-item" unselectable="on" style="font-size: 20px; line-height: 25px;">' + value.toUpperCase() + '</li>';
 						}
 						else {
 							scrollbar += '<li id="alphascroll-' + value + '" unselectable="on">' + value.toUpperCase() + '</li>';
@@ -96,6 +96,8 @@
 					});
 				}
 
+				var current, prev, prevSize, prevHeight, prevLetter;
+				
 				// do the scroll
 				function alphaScroll( y ) {
 					$( '.alphascroll-item' ).each( function() {
@@ -105,7 +107,58 @@
 								target    = $( '.' + letter[1] ),
 								position  = target.position(),
 								header_height;
-
+			
+							// restore font size of character
+							if(prev) {							
+								$(prev).css('font-size', prevSize);
+								$(prev).css('line-height', prevHeight);
+								
+								/*
+								console.log("revert prev font-size: " + $(prev).css('font-size')); 
+								console.log("revert prev line-height: " + $(prev).css('line-height')); 
+								console.log("------------------------------------------------------");
+								*/
+							}
+							
+							/*
+							if(prevLetter) {
+								console.log("hiding prev list");
+								var prevList = $('.' + prevLetter);
+								$.each(prevList, function(i) {
+									$(prevList[i]).css('display', 'none');
+								});
+							}
+							*/
+							
+							// make current letter bigger
+							current = this;
+							prev = current;
+							//prevLetter = letter[1];
+							prevSize = $(current).css('font-size');
+							prevHeight = $(current).css('line-height');
+									
+							/*
+							console.log("id: " + scroll_id + " - letter: " + letter[1]);
+							console.log("current size: " + prevSize);
+							console.log("current height: " + prevHeight);
+							*/
+							
+							$(current).css('font-size', '3em');
+							$(current).css('line-height', '35px');
+							
+							/*
+							console.log("after font-size: " + $(current).css('font-size')); 
+							console.log("after line-height: " + $(current).css('line-height')); 
+							*/
+							
+							/*
+							if($(current).is('li')) {
+								console.log("element is li");
+							} else {
+								console.log("element is not li");
+							}
+							*/
+							
 							// offset scroll-top if header is displayed
 							if ( $( '.ui-page-active [data-role="header"]' ).hasClass( 'ui-fixed-hidden' ) ) {
 								header_height = 0;
@@ -115,11 +168,31 @@
 							}
 
 							// scroll the page
-							$.mobile.silentScroll( position.top - header_height );
-						}
+							//$.mobile.silentScroll( position.top - header_height );
+							
+							// show only the matching sublist
+							var list = $('#alphabetListID .' + letter[1]);
+							console.log("current scroll size: " + list.size());
+							/*
+							$.each(list, function(i) {
+								$(list[i]).css('display', 'block');
+							});
+							$('#alphabetListID').listview('refresh');
+							*/
+							
+							$('#nameListID').empty();
+							$.each(list, function(i) {
+								var temp = $(list[i]).clone();
+								$(temp).attr('id', 'NEW' + $(list[i]).attr('id'));
+								console.log("orig id: " + $(list[i]).attr('id') + " - new id: " + $(temp).attr('id'));
+								$('#nameListID').append(temp);
+								$(temp).css('display', 'block');
+							});
+							$('#nameListID').listview('refresh');
+						} 
 					});
 				}
-
+							
 				// generate scrollbar on invokation
 				createScrollbar();
 			});

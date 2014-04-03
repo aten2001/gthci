@@ -18,9 +18,9 @@
     <!-- Custom scripts -->
     <script>
         $(function() {
-            $( "#image1-draggable" ).draggable();
-            $( "#image2-draggable" ).draggable();
-            $( "#image3-draggable" ).draggable();
+            $( "#image1-draggable" ).draggable({ snap: "#snap-inner", snapMode: "inner", snapTolerance: 30 });
+            $( "#image2-draggable" ).draggable({ snap: "#snap-inner", snapMode: "inner", snapTolerance: 30 });
+            $( "#image3-draggable" ).draggable({ snap: "#snap-inner", snapMode: "inner", snapTolerance: 30 });
         });
     </script>
 </head>
@@ -55,15 +55,11 @@
         </table>
 
         <!-- Circle -->
-        <div id="circle">
-            <svg width="600px" height="320px" 
-                 viewPort="0 0 200 200" version="1.1"
-                 xmlns="http://www.w3.org/2000/svg">
-                <circle cx="300" cy="200" r="100" fill="rgba(255,255,255,0.0)" stroke="black">
-            </svg>
-            <div style="font-size:1.7em">
-                Drag who you want to be able to see your stuff inside the circle
-            </div>
+        <div id="snap-outer">
+            <div id="snap-inner"></div>
+        </div>
+        <div>
+            <br /><br />Drag who you want to be able to see your stuff inside the circle
         </div>
     </div>
 

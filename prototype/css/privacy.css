@@ -1,33 +1,57 @@
 /* CSS file for all the elements on the Privacy Shortcuts page */
 
 #container {
-	width: 600px;
+    width: 600px;
 }
 
 #content {
-	background-color: #EEEEEE;
-	height: 800px;
-	width: 600px;
-	float:left;
+    background-color: #EEEEEE;
+    height: 800px;
+    width: 600px;
+    float:left;
+}
+
+#snap-outer {
+    width: 80%;
+    height: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #3B5998;
+}
+
+#snap-inner {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 8%;
+    left: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
 }
 
 #circle {
-	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #icon-table {
-
+    /* TODO: table style; */
 }
 
 .wide-images {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .images {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
 }

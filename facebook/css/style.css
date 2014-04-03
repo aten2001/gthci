@@ -8,8 +8,12 @@
 
 #contentID {
 	position: relative;
-	left: 40px;
+	left: 50px;
 	width: 20%;
 }
 
-
+#nameDivID {
+	position: relative;
+	left: 50px;
+	width: 20%;
+}

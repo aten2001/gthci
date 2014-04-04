@@ -17,7 +17,7 @@
 	
 }
 #nameDivID{
-overflow:hidden;
+overflow:visible;
 padding-top:10px;
 padding-left:10px;
 
@@ -25,7 +25,7 @@ padding-left:10px;
 #indexPageID {
 	/*border: 1px solid #432543;*/
 	height: 100%;
-	overflow: hidden;
+	overflow: visible;
 }
 body {
     background-color: #EEEEEE;

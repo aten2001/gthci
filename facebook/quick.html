@@ -1,0 +1,130 @@
+<html>
+	<head>
+		<title>Facebook - Favorite Features</title>
+		
+		<link type="text/css" rel="stylesheet" href="jquery_ui/themes/base/jquery.ui.all.css">
+		<link type="text/css" rel="stylesheet" href="jquery_ui/demos/demos.css">
+		<link type="text/css" rel="stylesheet" href="css/self_drag.css">
+		
+		<script type="text/javascript" src="jquery_ui/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.mouse.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.sortable.js"></script>
+		<script type="text/javascript" src="jquery_ui/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="js/self_drag.js"></script>
+		<script type="text/javascript" src="js/quick.js"></script>
+	</head>
+	
+	<body>
+		<div id="quickPageID" data-role="page">
+			<div id="quickHeaderID" data-role="header">
+				<img id="defHeader2ID" src="img/header_bar.png">
+				<!--
+				<div id="navBar2ID" data-role="navbar" data-grid="c" data-theme="b">
+					<ul id="navBarTop2ID" data-role="menu">
+						<li>
+							<select>
+								<option selected disabled>Comm</option>
+								<option>Chat</option>
+								<option>Friends</option>
+								<option>Events</option>
+								<option>Groups</option>
+								<option>Messages</option>
+								<option>Notifications</option>
+								<option>Requests</option>
+							</select>
+						</li>
+						<li>
+							<select>
+								<option selected disabled>Apps</option>
+								<option>App Center</option>
+								<option>Show Favorites</option>
+								<option>Show Recent</option>
+								<option>Show All</option>
+							</select>
+						</li>
+						<li>
+							<select onchange="location = this.options[this.selectedIndex].value;">
+								<option value="timeline.html">Timeline</option>
+							</select>
+						</li>
+						<li>
+							<select onchange="location = this.options[this.selectedIndex].value;">	
+								<option value="newsfeed.html">Newsfeed</option>
+							</select>
+						</li>
+					</ul>
+					<ul id="navBarBottom2ID" data-role="menu">
+						<li>
+							<select>
+								<option selected disabled>More</option>
+								<option>Offers</option>
+								<option>Pages</option>
+							</select>
+						</li>
+						<li>
+							<select>
+								<option selected disabled>Settings</option>
+								<option>Account</option>
+								<option value="quick.html">Customize Quick</option>
+								<option>Manage Events</option>
+								<option>Manage Groups</option>
+								<option>Manage Pages</option>
+								<option>Privacy</option>
+								<option>Terms & Policies</option>
+								<option>About</option>
+							</select>
+						</li>
+						
+						<li>
+							<select>
+								<option>Help</option>
+							</select>
+						</li>
+						<li>
+							<select onchange="location = this.options[this.selectedIndex].value;">
+								<option value="quick.html">Quick</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				-->
+			</div>
+			
+			<div id="quickContentID" data-role="content">
+				<div id="dragDivID">
+					<div id="favDivID">
+						<p><h1><b>Favorite Features</b></h1></p>
+						<ul id="favFeaturesID" class="connectedSortable">
+							<li id="favPHID" class="ui-state-highlight"></li>
+						</ul>
+					</div>
+					
+					<div id="allDivID">
+						<p><h1><b>All Features</b></h1></p>
+						<ul id="allFeaturesID" class="connectedSortable">
+							<li id="allPHID" class="ui-state-default"></li>
+							<li class="ui-state-default">Chat</li>
+							<li class="ui-state-default">Events</li>
+							<li class="ui-state-default">Family</li>
+							<li class="ui-state-default">Friends</li>
+							<li class="ui-state-default">Games</li>
+							<li class="ui-state-default">Help</li>
+							<li class="ui-state-default">Messages</li>
+							<li class="ui-state-default">Nearby Places</li>
+							<li class="ui-state-default">News Feed</li>
+							<li class="ui-state-default">Notes</li>
+							<li class="ui-state-default">Notifications</li>
+							<li class="ui-state-default">Offers</li>
+							<li class="ui-state-default">Photos</li>
+							<li class="ui-state-default">Pokes</li>
+							<li class="ui-state-default">Requests</li>
+							<li class="ui-state-default">Study</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -5,31 +5,24 @@
 		<!-- index -->
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.alphascroll.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/privacy.css" />
 		
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile.alphascroll.js"></script>
 		<script type="text/javascript" src="js/self_scroll.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/privacy.js"></script>
 	</head>
 	
 	<body>
 		<div id="indexPageID" data-role="page">
 			<div id="indexHeaderID" data-role="header">
 				<img id="defHeader1ID" src="img/header.png">
-				<div id="navBar1ID" data-role="navbar" data-grid="b" data-theme="b">
+				<div id="navBar1ID" data-role="navbar" data-grid="c" data-theme="b">
 					<ul id="navBarTop1ID" data-role="menu">
 						<li>
 							<select>
-								<option selected disabled><a href="#">More</a></option>
-								<option>Offers</option>
-								<option>Pages</option>
-							</select>
-						</li>
-						<li>
-							<select>
-								<option selected disabled><a href="#">Comm</a></option>
+								<option selected disabled>Comm</option>
 								<option>Chat</option>
 								<option>Friends</option>
 								<option>Events</option>
@@ -41,19 +34,37 @@
 						</li>
 						<li>
 							<select>
-								<option selected disabled><a href="#">Apps</a></option>
+								<option selected disabled>Apps</option>
 								<option>App Center</option>
 								<option>Show Favorites</option>
 								<option>Show Recent</option>
 								<option>Show All</option>
 							</select>
 						</li>
+						<li>
+							<select>
+								<option>Timeline</option>
+							</select>
+						</li>
+						<li>
+							<select id="newsfeed1ID">					
+								<option>Newsfeed</option>
+							</select>
+						</li>
 					</ul>
 					<ul id="navBarBottom1ID" data-role="menu">
 						<li>
 							<select>
-								<option selected disabled><a href="#">Settings</a></option>
+								<option selected disabled>More</option>
+								<option>Offers</option>
+								<option>Pages</option>
+							</select>
+						</li>
+						<li>
+							<select>
+								<option selected disabled>Settings</option>
 								<option>Account</option>
+								<option id="cusQuick1ID">Customize Quick</option>
 								<option>Manage Events</option>
 								<option>Manage Groups</option>
 								<option>Manage Pages</option>
@@ -62,15 +73,15 @@
 								<option>About</option>
 							</select>
 						</li>
-						<li>
-							<select onchange="location = this.options[this.selectedIndex].value;">
-								<option>Timeline</option>
-								<option value="news.html">Newsfeed</option>
-							</select>
-						</li>
+						
 						<li>
 							<select>
 								<option>Help</option>
+							</select>
+						</li>
+						<li>
+							<select id="quick1ID">
+								<option>Quick</option>
 							</select>
 						</li>
 					</ul>

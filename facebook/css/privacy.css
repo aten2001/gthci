@@ -1,0 +1,22 @@
+#navBar1ID {
+	margin: auto;
+}
+
+#navBarTop1ID, #navBarBottom2ID {
+	font-size: 3em;
+}
+
+#backDivID, #nameDivID  {
+	position: relative;
+	left: 50px;
+	top: 15px;
+	width: 20%; /*20%*/
+}
+
+#indexPageID {
+	/*border: 1px solid #432543;*/
+	height: 100%;
+	overflow: scroll;
+}
+
+

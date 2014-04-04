@@ -1,0 +1,46 @@
+#favFeaturesID, #allFeaturesID { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0 0 2.5em; 
+	float: left; 
+	margin-right: 100px;
+	border: 1px solid #223345;
+}
+
+#favFeaturesID li, #allFeaturesID li { 
+	margin: 0 5px 5px 5px;
+	padding: 5px; 
+	font-size: 2.5em; /*1.2em*/
+	width: 300px; /*120px*/ 
+}
+
+#favPHID , #allPHID {
+	visibility: hidden;
+}
+
+#favDivID {
+	/*border: 1px solid #669911;*/
+	position: absolute;
+	z-index: 1;
+	margin: auto;
+	text-align: center;
+	left: 25px;
+}
+
+#allDivID {
+	/*position: relative;*/
+	/*top: -29px;*/
+	/*border: 1px solid #071169;*/
+	position: absolute;
+	z-index: 2;
+	left: 580px;
+	margin: auto;
+	text-align: center;
+	right: 0px;
+}
+
+#dragDivID {
+	/*border: 1px solid #042911;*/
+	padding: 10px;
+	position: relative;
+}

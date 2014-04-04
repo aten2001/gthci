@@ -22,11 +22,11 @@
 #newsDivID {
 	overflow: scroll;
 	margin: auto;
-	/*border: 1px solid #874635;*/
+	border: 1px solid #874635;
 }
 
 #newsContentID {
-	/*border: 1px solid #123456;*/
+	border: 1px solid #123456;
 	position: relative;
 	top: 10px;
 }

@@ -1,9 +1,13 @@
 $(document).ready(function(){    
-	$('#defHeader3ID').width($('#newsHeaderID').width());
-	$('#defHeader4ID').width($('#newsHeaderID').width());
+	var barWidth = $('#newsHeaderID').width();
+	$('#defHeader3ID').width(barWidth);
+	$('#defHeader4ID').width(barWidth);
 	
 	var extra = 30;
-	$('#newsDivID').width($($('#newsListID li')[0]).width() + extra);
+	var itemWidth = $($('#newsListID li')[0]).width() + extra;
+	$('#newsDivID').width(itemWidth);
+	
+	var diff = itemWidth/barWidth;
 	
 	$(window).resize(function() {
 		console.log("window resized");
@@ -14,14 +18,19 @@ $(document).ready(function(){
 		
 		var newItemWidth = $($('#newsListID li')[0]).width() + extra;
 		$('#newsDivID').width(newItemWidth);
+		$('#newsDivID').css('margin', 'auto');
 		
 		var list = $('#newsListID li');
 		$.each(list, function(i) {
 			var item = $(list[i]);
 			var img = item.find('img');
-			item.width(newItemWidth);
-			$(img).width(newItemWidth);
+			item.width(diff * newBarWidth);
 			item.height($(img).height());
+			$(img).width(diff * newBarWidth);
+			item.css('margin', 'auto');
 		});
+		
+		console.log("new bar width: " + newBarWidth);
+		console.log("new item width: " + newItemWidth);
 	});
 });

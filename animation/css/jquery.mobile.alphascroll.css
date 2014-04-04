@@ -2,8 +2,8 @@
 	color: #666;
 	text-shadow: none;
 	list-style: none;
-	position: fixed;
-	top: 65px; /*37px*/
+	position: fixed; 
+	top: 130px; /*37px, 65px*/
 	left: 5px; /*right: 4px*/
 	z-index: 1001;
 	font-size: 15px; /*11px*/
@@ -11,7 +11,7 @@
 	margin-left: 0;
 	padding-left: 0;
 	border-radius: 24px;
-	padding: 6px 0;
+	padding: 6px 0; 
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -27,7 +27,7 @@
 	text-align: center;
 	line-height: 14px;
 	margin: 0;
-	width: 28px;
+	width: 40px; /*28px*/
 }
 .alphascroll li.truncated {
 	line-height: 4px;

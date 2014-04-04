@@ -13,6 +13,14 @@ $(document).ready(function(){
 		window.location = "quick.html";
 	});
 	
+	$('#settings1ID').bind('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+	  
 	$(window).resize(function() {
 		console.log("window resized");
 		$('#defHeader1ID').width($('#indexHeaderID').width());

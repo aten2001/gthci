@@ -1,0 +1,133 @@
+<!--
+    The content on this page was created for an academic project for a HCI class.
+    The stylizing is similar to Facebook's mobile app, as the project is about creating a new interface for
+    adjusting privacy settings on Facebook's mobile app. All images belong to their own respective owners.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Facebook Privacy Shortcuts
+    </title>
+    <!-- Include JS scripts and CSS -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.alphascroll.css" />
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="css/privacyStyle.css">
+	
+    <!-- Custom scripts -->
+    <script>
+        $(function() {
+            // Set draggable, and revert back to original position
+            // if not snapped to #droppable
+            $(".draggable").draggable({
+                revert : function(event, ui) {
+                    $(this).data("uiDraggable").originalPosition = {
+                        top : 0,
+                        left : 0
+						
+                    };
+                    // return (event !== false) ? false : true;
+					alert('original position');
+					alert(Object.prototype.toString.call(event));
+                    return !event; 
+					},
+                snap: "#droppable",
+                snapMode: "inner",
+                snapTolerance: 30
+				
+            });
+            $("#droppable").droppable();
+			
+			
+			
+	$('#custom').click(function() {
+	alert('custom cliced');
+	
+	$('.images').fadeTo( "slow", 0.0);
+	$('#whocansee').fadeTo( "slow", 0.0);
+	$('#shortcuts').fadeTo( "slow", 0.0);
+	//$('#image2').fadeTo( "slow", 0.0);
+	//$('#image3').fadeTo( "slow", 0.0);
+	$('#textDrag').fadeTo( "slow", 0.0);
+	$('#update-text').fadeTo( "slow", 0.0);
+	$('#custom').fadeTo( "slow", 0.0);
+	   $("#snap-outer").animate(
+            { left:'450px',
+			  height:'400px',
+			  width:'800px',
+			  top: '-=200px',
+			  zindex: '2'
+			  
+			},
+            "slow",
+			function() {
+    window.location='index2.html';
+}	
+			
+			);
+			
+	
+	});
+
+	
+			
+			
+        });
+    </script>
+</head>
+
+<body>
+<div id="bodywrap">
+			<div id="container">
+
+<div id="indexHeaderID" data-role="header">
+				<img id="defHeader2ID" src="images/top_bar.png">
+				
+			</div>
+
+    <div id="header">
+        <img id="shortcuts" class="wide-images" src="images/privacyshortcuts.png" alt="Privacy Shortcuts" />
+        <br />
+        <img id="whocansee"  class="wide-images" src="images/whocanseemystuff.png" alt="Banner: Who can see my stuff?" />
+    </div>
+    <div id="content">
+        <!-- Draggable Icons -->
+        <table><tr>
+            <td>
+                <div class="draggable">
+                    <img class="images" src="images/icon_user.png" alt="You" />
+                </div>
+            </td>
+            <td>
+                <div class="draggable">
+                    <img class="images" src="images/icon_friends.png" alt="Your Friends" />
+                </div>
+            </td>
+            <td>
+                <div class="draggable">
+                    <img class="images" src="images/icon_everyone.png" alt="Everyone" />
+                </div>
+            </td>
+        </tr></table>
+
+        <!-- Permission Box -->
+        <div id="snap-outer">
+            <div id="droppable"></div>
+        </div>
+        <div  id="update-text">
+            <!-- TODO: This text should dynamically adjust based on # of elements inside box -->
+            Drag who you want to be able to see your stuff inside the box
+        </div>
+		<img id="custom"  src="images/custom.png" align="center" alt="Custom" >
+
+    </div>
+<!--
+<img class="wide-images" src="images/footer.png" alt="Footer Navigation" />
+-->
+</div>
+</body>
+</html>

@@ -56,6 +56,19 @@ width:720px;
 height: 800px;
     border-color: red;
 overflow:hidden;
-
-
 }
+
+#done {
+position: absolute;
+height:7%;
+left: 50%;
+top: 80%;
+}
+
+#done2 {
+position: absolute;
+height:7%;
+left: 50%;
+top: 80%;
+}
+

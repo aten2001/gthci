@@ -29,7 +29,7 @@ $(document).ready(function(){
 	});
 	
 	$('.ui-li-heading').click(function() {
-	alert("item clicked");
+	//alert("item clicked");
 	
 	
 	});

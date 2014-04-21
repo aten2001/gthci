@@ -1,33 +1,3 @@
-#navBar1ID {
-	margin: auto;
-}
-
-#navBarTop1ID, #navBarBottom2ID {
-	font-size: 3em;
-}
-
-#backDivID, #nameDivID  {
-	position: relative;
-	left: 50px;
-	top: 15px;
-	width: 50%; /*20%*/	
-}
-
-#nameDivID {
-	overflow:visible;
-	padding-top:10px;
-	padding-left:10px;
-}
-#indexPageID {
-	/*border: 1px solid #432543;*/
-	height: 100%;
-	overflow: visible;
-}
-
-#ui-btn {
-	z-index: 1;
-}
-
 /* ----------------------------------------------- */
 /* --- CSS for privacy_custom.html starts here --- */
 /* ----------------------------------------------- */
@@ -35,30 +5,24 @@
 body {
     background-color: #EEEEEE;
 	width: 720px;
-	height: 1200px;
 	position: relative;
 }
 
 #body-container {
 	overflow: hidden;
-}
-
-#box-container {
-	position: absolute;
-	top: 172px;
-	left: 450px;
-	width: 720px;
-	height: 800px;
-	overflow: hidden;
+	height: 600px
 }
 
 #drag-destination {
-	position: relative;
+	position: absolute;
 	top: 200px;
+	left: 450px;
+	width: 720px;
 	height: 420px;
 	padding: 15px;
 	background-image: url(../images/thebox.png);
 	background-repeat: no-repeat;
+	overflow: hidden;
 }
 
 #sortable1, #sortable2 { 
@@ -74,4 +38,14 @@ body {
 	padding: 5px;
 	font-size: 1.2em;
 	width: 200px;
+}
+
+#save-container {
+	position: relative;
+	left: -200;
+	top: 360px;
+}
+
+#save-button {
+	height:58px;
 }

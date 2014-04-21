@@ -1,10 +1,23 @@
 <html>
 	<head>
 		<title>Facebook - Favorite Features</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
+				<link rel="stylesheet" type="text/css" href="css/jquery.mobile.alphascroll.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile.alphascroll.js"></script>
+				<script type="text/javascript" src="js/privacy.js"></script>
+
+		
 		
 		<link type="text/css" rel="stylesheet" href="jquery_ui/themes/base/jquery.ui.all.css">
 		<link type="text/css" rel="stylesheet" href="jquery_ui/demos/demos.css">
 		<link type="text/css" rel="stylesheet" href="css/self_drag.css">
+		
+				
+		<!--  imported style scripts for the top bar-->
+		
+
 		
 		<script type="text/javascript" src="jquery_ui/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.core.js"></script>
@@ -15,8 +28,9 @@
 		<script type="text/javascript" src="js/self_drag.js"></script>
 		<script type="text/javascript" src="js/quick.js"></script>
 
-		
-		
+		<!--  imported scripts for the top bar-->
+	
+
 		
 		
 	</head>
@@ -24,14 +38,14 @@
 	<body>
 		<div id="bodywrapper" >
 		<div id="quickPageID" data-role="page">
-			<div id="quickHeaderID" data-role="header">
-				<img id="defHeader2ID" src="images/top_menu.png">
-				<!--
-				<div id="navBar2ID" data-role="navbar" data-grid="c" data-theme="b">
-					<ul id="navBarTop2ID" data-role="menu">
+<div id="indexHeaderID" data-role="header">
+				<img id="defHeader1ID" src="images/top_bar.png">
+				<div id="navBar1ID" data-role="navbar" data-grid="b" data-theme="b">
+					<ul id="navBarTop1ID" data-role="menu">
 						<li>
 							<select>
-								<option selected disabled>Comm</option>
+								<option selected disabled>Communication</option>
+								<option id="cusPrivacyID" value="newsfeed.html">News Feed</option>
 								<option>Chat</option>
 								<option>Friends</option>
 								<option>Events</option>
@@ -51,51 +65,41 @@
 							</select>
 						</li>
 						<li>
-							<select onchange="location = this.options[this.selectedIndex].value;">
-								<option value="timeline.html">Timeline</option>
+							<select>
+								<option>Timeline</option>
 							</select>
 						</li>
-						<li>
-							<select onchange="location = this.options[this.selectedIndex].value;">	
-								<option value="newsfeed.html">Newsfeed</option>
-							</select>
-						</li>
+						
 					</ul>
-					<ul id="navBarBottom2ID" data-role="menu">
+					<ul id="navBarBottom1ID" data-role="menu">
 						<li>
 							<select>
 								<option selected disabled>More</option>
 								<option>Offers</option>
 								<option>Pages</option>
-							</select>
-						</li>
-						<li>
-							<select>
-								<option selected disabled>Settings</option>
-								<option>Account</option>
-								<option value="quick.html">Customize Quick</option>
-								<option>Manage Events</option>
-								<option>Manage Groups</option>
-								<option>Manage Pages</option>
-								<option>Privacy</option>
-								<option>Terms & Policies</option>
-								<option>About</option>
-							</select>
-						</li>
-						
-						<li>
-							<select>
 								<option>Help</option>
 							</select>
 						</li>
 						<li>
-							<select onchange="location = this.options[this.selectedIndex].value;">
-								<option value="quick.html">Quick</option>
+							<select id="settings1ID">
+								<option selected disabled>Settings</option>
+								<option>Account</option>
+								<option id="cusQuick1ID" value="quick.html">Customize Quick</option>
+								<option>Manage Events</option>
+								<option>Manage Groups</option>
+								<option>Manage Pages</option>
+								<option id="cusNewsfeedID" value="Privacy.html">Privacy</option>
+								<option>Terms & Policies</option>
+								<option>About</option>
+							</select>
+						</li>
+						<li>
+							<select id="quick1ID">
+								<option>Quick</option>
 							</select>
 						</li>
 					</ul>
 				</div>
-				-->
 			</div>
 			
 			<div id="quickContentID" data-role="content">
@@ -129,9 +133,10 @@
 							<li class="ui-state-default">Study</li>
 						</ul>
 					</div>
+					<script src="js/privacy.js"></script>
 				</div>
 			</div>
 		</div>
-	<div>
+	
 	</body>
 </html>

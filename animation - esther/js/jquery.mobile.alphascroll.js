@@ -1,5 +1,5 @@
 ( function( $ ) {
-
+	var accepted;
 	$.fn.extend({
 
 		alphascroll: function() {
@@ -180,11 +180,18 @@
 							$('#alphabetListID').listview('refresh');
 							*/
 							
+							accepted = $('#acceptedListID').children();
+							$.each(accepted, function(i) { 
+								console.log("***" + accepted[i].val());
+							});
 							$('#nameListID').empty();
 							$.each(list, function(i) {
+								if($.inArray($(list[i]).val(), accepted)) {
+									console.log($(list[i]).val());
+								}
 								var temp = $(list[i]).clone();
 								$(temp).attr('id', 'NEW' + $(list[i]).attr('id'));
-								console.log("orig id: " + $(list[i]).attr('id') + " - new id: " + $(temp).attr('id'));
+								//console.log("orig id: " + $(list[i]).attr('id') + " - new id: " + $(temp).attr('id'));
 								$('#nameListID').append(temp);
 								$(temp).css('display', 'block');
 							});

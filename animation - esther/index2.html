@@ -2,21 +2,28 @@
 	<head>
 	
 		<title>Facebook - Privacy</title>
+			
+		<link type="text/css" rel="stylesheet" href="jquery_ui/themes/base/jquery.ui.all.css">
+		<link type="text/css" rel="stylesheet" href="jquery_ui/demos/demos.css">
 		
-		<!-- index -->
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.alphascroll.css" />
 		<link rel="stylesheet" type="text/css" href="css/privacy.css" />
 		
+		<!--<script type="text/javascript" src="jquery_ui/jquery-1.10.2.js"></script>-->
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.core.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.mouse.js"></script>
+		<script type="text/javascript" src="jquery_ui/ui/jquery.ui.sortable.js"></script>
+		<script type="text/javascript" src="jquery_ui/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="js/self_drag_box.js"></script>
+		
 		<script type="text/javascript" src="js/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mobile.alphascroll.js"></script>
+		
 		<script type="text/javascript" src="js/self_scroll.js"></script>
 		<script type="text/javascript" src="js/privacy.js"></script>
-		
-
-		
-		
 		
 	</head>
 	
@@ -42,18 +49,18 @@
 					</div>
 					
 					<div id="nameDivID">
-						<ul id="nameListID" data-role="listview" data-autodividers="true"></ul>
+						<ul id="nameListID" class="connectedSortable" data-role="listview" data-autodividers="true"></ul>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="boxwrap">
-		<img id="thebox" src="images/thebox.png">
-		<img id="done2" src="images/done.png">
+			<img id="thebox" src="images/thebox.png">
+			<img id="done2" src="images/done.png">
+			<ul id="acceptListID" class="connectedSortable">
+				<li id="placeHolderID">Drag name in here!</li>
+			</ul>
 		</div>
-		
-		
-		
 	</div>
 	</body>
 </html>

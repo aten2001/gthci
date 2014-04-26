@@ -1,0 +1,51 @@
+/* ----------------------------------------------- */
+/* --- CSS for privacy_custom.html starts here --- */
+/* ----------------------------------------------- */
+
+body {
+    background-color: #EEEEEE;
+	width: 720px;
+	position: relative;
+}
+
+#body-container {
+	overflow: hidden;
+	height: 600px
+}
+
+#drag-destination {
+	position: absolute;
+	top: 200px;
+	left: 450px;
+	width: 720px;
+	height: 420px;
+	padding: 15px;
+	background-image: url(../images/thebox.png);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+#sortable1, #sortable2 { 
+	list-style-type: none;
+	margin: 0;
+	padding: 1em;
+	float: left;
+	margin-right: 10px;
+}
+
+#sortable1 li, #sortable2 li {
+	margin: 0 5px 5px 5px;
+	padding: 5px;
+	font-size: 1.2em;
+	width: 200px;
+}
+
+#save-container {
+	position: relative;
+	left: -200;
+	top: 360px;
+}
+
+#save-button {
+	height:58px;
+}

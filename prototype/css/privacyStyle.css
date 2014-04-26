@@ -1,0 +1,112 @@
+/* CSS file for all the elements on the Privacy Shortcuts page */
+
+body {
+    background-color: #EEEEEE;
+	width:720px;
+	height: 1200px;
+	position:relative;
+}
+
+#bodywrap {
+
+	overflow: hidden; 
+	position:relative;
+
+}
+
+table {
+    border: 0px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+tr {
+    height: 200px;
+}
+
+td {
+    width: 33%;
+}
+
+#container {
+    width: 720px;
+}
+
+#defHeader2ID {
+width: 720px;
+}
+
+#content {
+    width: 720px;
+    float:left;
+}
+
+/* The outer box that is drawn. */
+#snap-outer {
+    width: 80%;
+    height: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #3B5998;
+    z-index: -1;
+}
+
+/* The inner box that the elements snap to (where you "drop" them)
+ * Do not change these values unless you know what you're doing! */
+#droppable {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    z-index: -1;
+}
+
+#update-text {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3B5998;
+}
+
+.wide-images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+
+#custom {
+margin-left: auto; 
+margin-right: auto;
+height:50px;
+}
+
+#savebutton {
+margin-left: auto; 
+margin-right: auto;
+height:58px;
+}
+
+
+

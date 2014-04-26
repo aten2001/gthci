@@ -1,0 +1,104 @@
+#postPageContentID {
+	/*border: 1px solid #123456;*/
+	margin: auto;
+}
+
+#postShowID {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	margin: auto;
+	/*border: 1px solid #873652;*/
+	width: 100%;
+}
+
+#postWriteID {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	margin: auto;
+	/*border: 1px solid #653728;*/
+	width: 100%;
+}
+
+#postTextAreaID {
+	margin: auto;
+	width: 100%;
+	height: 80%;
+	resize: none;
+}
+
+#headerCancelImgID, #headerSubmitImgID {
+	display: block;
+	float: left;
+	width: 10%;
+}
+
+#headerTitleImgID {
+	display: block;
+	float: left;
+	width: 80%;
+}
+
+#headerWriteImgID {
+	display: block;
+	height: 20%;
+	width: 100%;
+}
+
+#footerWriteImgID {
+	height: 20%;
+	width: 100%;
+}
+
+#headerShowImgID {
+	display: block;
+	/*height: 15%;*/
+	width: 100%;
+	/*border: 1px solid #425261;*/
+}
+
+#nextPostID {
+	margin: 10px;
+}
+
+/*
+#headerLeftID {
+	display: block;
+	float: left;
+	width: 90%;
+	height: 100%;
+	border: 1px solid #764533;
+}
+
+#headerRightID {
+	display: block;
+	float: left;
+	width: 10%;
+	height: 100%;
+	border: 1px solid #234253;
+}
+*/
+
+#headerEyeID {
+	margin: auto;
+	width: 100%;
+	/*height: 100%;*/
+}
+
+#contentShowTextID {
+	height: 70%;
+	width: 100%;
+}
+
+#footerShowImgID {
+	height: 15%;
+	width: 100%;
+}
+
+#footerShowBarImgID {
+	/*height: 100%;*/
+	width: 100%;
+}
+
+
